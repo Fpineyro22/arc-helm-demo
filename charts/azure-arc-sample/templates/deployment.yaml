@@ -4,7 +4,7 @@ metadata:
   name: {{.Release.Name}}
   namespace: {{ .Release.Namespace }}
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: {{.Release.Name}}
@@ -29,8 +29,8 @@ spec:
         - containerPort: 8080
         resources:
           requests:
-            memory: "50Mi"
-            cpu: "125m"
+            memory: "10Mi"
+            cpu: "100m"
           limits:
-            memory: "256Mi"
-            cpu: "500m"
+            memory: "60Mi"
+            cpu: "200m"
